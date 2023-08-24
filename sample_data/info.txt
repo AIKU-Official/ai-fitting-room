@@ -1,0 +1,9 @@
+| NAME         | Symbol | Extension |
+|--------------|--------|-----------| 
+| model        |   _0   |    .jpg   |
+| garment      |   _1   |    .jpg   |
+| keypoints    |   _2   |    .json  |
+| skeleton     |   _3   |    .jpg   |
+| label map    |   _4   |    .png   |
+| dense uv     |   _5   |    .npz   |
+| dense labels |   _5   |    .jpg   |
