@@ -6,7 +6,7 @@ Virtual Try-On 모델을 이용한 AI 피팅룸
 
 </aside>
 
-# 💪 Our Team
+## 💪 Our Team
 
 > **김채현** _Lead_
 
@@ -28,15 +28,14 @@ Virtual Try-On 모델을 이용한 AI 피팅룸
 - Data Processing
 - Presentation
 
-# 👗 Introduction
+## 👗 Introduction
 
 ### Motivation
 
 가끔, 내가 가지고 있는 옷들 중 어떤 걸 코디해야 할지 전혀 감이 오지 않는 경우가 있습니다. “이렇게 입으면 괜찮겠지”하고 입어봤더니 내가 상상했던 모습이 아니라 당황스러웠던 적도 있고요. 이런 고민들을 해결하기 위해, 직접 입어보지 않고도 옷을 입은 나의 모습을 확인해볼 수 있도록 피팅해주는 딥러닝 모델을 만들고 싶다는 생각에서 시작되었습니다.
 
 ![Image from **[TryOnDiffusion: A Tale of Two UNets](https://tryondiffusion.github.io/)**](https://github.com/kchyun/ai-fitting-room/assets/63688973/bd3ab808-3b0f-4456-bc92-6aaea5ee5978)
-
-Image from **[TryOnDiffusion: A Tale of Two UNets](https://tryondiffusion.github.io/)**
+\*Image from \*\*[TryOnDiffusion: A Tale of Two UNets](https://tryondiffusion.github.io/)\*\*\*
 
 ### Goal
 
@@ -44,11 +43,11 @@ Image from **[TryOnDiffusion: A Tale of Two UNets](https://tryondiffusion.github
 
 **⇒ 이를 확장해 상의, 하의 및 드레스까지 피팅 가능한 모델을 만들어보자!**
 
-# 📚 Dataset
+## 📚 Dataset
 
 ### Dress-Code [[repo]](https://github.com/aimagelab/dress-code)
 
-Proposed in “**[Dress Code: High-Resolution Multi-Category Virtual Try-On](https://arxiv.org/abs/2204.08532)”**
+\*Proposed in “**[Dress Code: High-Resolution Multi-Category Virtual Try-On](https://arxiv.org/abs/2204.08532)”\***
 
 - 1024 x 768 고화질 이미지
 - 5만여 장의 옷, 10만여 장의 전신 이미지 데이터
@@ -56,19 +55,17 @@ Proposed in “**[Dress Code: High-Resolution Multi-Category Virtual Try-On](htt
 
 ![Untitled](https://github.com/kchyun/ai-fitting-room/assets/63688973/55be9ea7-22c0-4b96-902b-9677cf535f6f)
 
-# 📐 Modeling
+## 📐 Modeling
 
 ### DAFlow [[repo]](https://github.com/OFA-Sys/DAFlow)
 
 Proposed in **"[Single Stage Virtual Try-on via Deformable Attention Flows](https://arxiv.org/abs/2207.09161)" from ECCV2022**
 
 ![Brief description of DAFlow](https://github.com/kchyun/ai-fitting-room/assets/63688973/9aba8dcc-c255-4df0-8fb0-fa9723042253)
-
-Brief description of DAFlow
+_Brief description of DAFlow_
 
 ![Input of DAFlow](https://github.com/kchyun/ai-fitting-room/assets/63688973/01cf8d52-bcf9-4ba0-a01f-16acb399b2ee)
-
-Input of DAFlow
+_Input of DAFlow_
 
 Deformable attention을 이용한 single stage, end-to-end 구조로, 기존 multi-stage 구조의 복잡성을 해결한 단순한 구조의 모델
 
@@ -77,7 +74,7 @@ Deformable attention을 이용한 single stage, end-to-end 구조로, 기존 mul
   2. Cascade flow estimation: DAFN and DAWarp
   3. Shallow encoder-decoder generation
 
-# ♻️ Data Processing
+## ♻️ Data Processing
 
 ### What is ‘Agnostic’?
 
@@ -99,7 +96,7 @@ Target Garment를 합성하고자 하는 자리를 검정색으로 마스킹한 
 
 ![Untitled](https://github.com/kchyun/ai-fitting-room/assets/63688973/beaf385e-e63f-4c7f-acf3-2e3467e1b3cc)
 
-# 🎓 Training
+## 🎓 Training
 
 ### Fine-Tuning
 
@@ -114,39 +111,32 @@ Target Garment를 합성하고자 하는 자리를 검정색으로 마스킹한 
   - Image Resolution: 512 x 384
   - 1800 paired Upper/Lower/Dresses sets each
 
-# 🧪 Results
+## 🧪 Results
 
 ### Sample results during training
 
 학습 과정에서 얻은 결과를 왼쪽에서 오른쪽으로 시간순 배열했습니다. 학습할수록 더 정확하고, 자연스럽게 합성하는 모습을 확인할 수 있었습니다. 4번째 epoch 이후부터는 오버피팅이 발생하였습니다.
 
 ![상의 합성 결과](https://github.com/kchyun/ai-fitting-room/assets/63688973/64f72b86-3493-4f04-a1b2-a64790eb08f1)
-
-상의 합성 결과
+_상의 합성 결과_
 
 ![하의 합성 결과](https://github.com/kchyun/ai-fitting-room/assets/63688973/ef36a884-3831-4fb1-9420-ae429173a76b)
-
-하의 합성 결과
+_하의 합성 결과_
 
 ![드레스 합성 결과](https://github.com/kchyun/ai-fitting-room/assets/63688973/120d30d7-3017-4402-9967-0a722b0ef595)
-
-드레스 합성 결과
+_드레스 합성 결과_
 
 ### Inference with new images
 
 ![Untitled](https://github.com/kchyun/ai-fitting-room/assets/63688973/28c894ff-11b4-49cc-b2cd-af2ba2479f3f)
 
-# ⛔ Limitation
+## ⛔ Limitation
 
 ![Failure cases.
 
 1. 복잡한 팔 형태에 맞게 합성에 실패한 경우
    2~3. 드레스의 넥라인 디테일이 사라지는 경우](https://github.com/kchyun/ai-fitting-room/assets/63688973/c729ddad-5fde-4c43-96fe-a5f461c45f2f)
-
-Failure cases.
-
-1. 복잡한 팔 형태에 맞게 합성에 실패한 경우
-   2~3. 드레스의 넥라인 디테일이 사라지는 경우
+   _Failure cases: 1. 복잡한 팔 형태에 맞게 합성에 실패한 경우, 2~3. 드레스의 넥라인 디테일이 사라지는 경우_
 
 - Agnostic mask의 형태에 민감
 - 복잡한 포즈에 대한 적응력 떨어짐
