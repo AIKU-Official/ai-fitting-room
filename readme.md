@@ -34,8 +34,8 @@ Virtual Try-On 모델을 이용한 AI 피팅룸
 
 가끔, 내가 가지고 있는 옷들 중 어떤 걸 코디해야 할지 전혀 감이 오지 않는 경우가 있습니다. “이렇게 입으면 괜찮겠지”하고 입어봤더니 내가 상상했던 모습이 아니라 당황스러웠던 적도 있고요. 이런 고민들을 해결하기 위해, 직접 입어보지 않고도 옷을 입은 나의 모습을 확인해볼 수 있도록 피팅해주는 딥러닝 모델을 만들고 싶다는 생각에서 시작되었습니다.
 
-![Image from **[TryOnDiffusion: A Tale of Two UNets](https://tryondiffusion.github.io/)**](https://github.com/kchyun/ai-fitting-room/assets/63688973/bd3ab808-3b0f-4456-bc92-6aaea5ee5978)
-\*Image from \*\*[TryOnDiffusion: A Tale of Two UNets](https://tryondiffusion.github.io/)\*\*\*
+![TryonDiffusion](https://github.com/kchyun/ai-fitting-room/assets/63688973/bd3ab808-3b0f-4456-bc92-6aaea5ee5978)
+_Image from **[TryOnDiffusion: A Tale of Two UNets](https://tryondiffusion.github.io/)**_
 
 ### Goal
 
@@ -47,7 +47,7 @@ Virtual Try-On 모델을 이용한 AI 피팅룸
 
 ### Dress-Code [[repo]](https://github.com/aimagelab/dress-code)
 
-\*Proposed in “**[Dress Code: High-Resolution Multi-Category Virtual Try-On](https://arxiv.org/abs/2204.08532)”\***
+Proposed in “**[Dress Code: High-Resolution Multi-Category Virtual Try-On](https://arxiv.org/abs/2204.08532)”**
 
 - 1024 x 768 고화질 이미지
 - 5만여 장의 옷, 10만여 장의 전신 이미지 데이터
@@ -132,11 +132,8 @@ _드레스 합성 결과_
 
 ## ⛔ Limitation
 
-![Failure cases.
-
-1. 복잡한 팔 형태에 맞게 합성에 실패한 경우
-   2~3. 드레스의 넥라인 디테일이 사라지는 경우](https://github.com/kchyun/ai-fitting-room/assets/63688973/c729ddad-5fde-4c43-96fe-a5f461c45f2f)
-   _Failure cases: 1. 복잡한 팔 형태에 맞게 합성에 실패한 경우, 2~3. 드레스의 넥라인 디테일이 사라지는 경우_
+![Failure cases](https://github.com/kchyun/ai-fitting-room/assets/63688973/c729ddad-5fde-4c43-96fe-a5f461c45f2f)
+_Failure cases: 1. 복잡한 팔 형태에 맞게 합성에 실패한 경우, 2~3. 드레스의 넥라인 디테일이 사라지는 경우_
 
 - Agnostic mask의 형태에 민감
 - 복잡한 포즈에 대한 적응력 떨어짐
