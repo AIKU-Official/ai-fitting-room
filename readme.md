@@ -61,18 +61,18 @@ Proposed in “**[Dress Code: High-Resolution Multi-Category Virtual Try-On](htt
 
 Proposed in **"[Single Stage Virtual Try-on via Deformable Attention Flows](https://arxiv.org/abs/2207.09161)" from ECCV2022**
 
-![Brief description of DAFlow](https://github.com/kchyun/ai-fitting-room/assets/63688973/9aba8dcc-c255-4df0-8fb0-fa9723042253)
-_Brief description of DAFlow_
-
-![Input of DAFlow](https://github.com/kchyun/ai-fitting-room/assets/63688973/01cf8d52-bcf9-4ba0-a01f-16acb399b2ee)
-_Input of DAFlow_
-
 Deformable attention을 이용한 single stage, end-to-end 구조로, 기존 multi-stage 구조의 복잡성을 해결한 단순한 구조의 모델
 
 - **특징**
   1. Pyramid feature extraction: coarse-to-fine
   2. Cascade flow estimation: DAFN and DAWarp
   3. Shallow encoder-decoder generation
+
+![Brief description of DAFlow](https://github.com/kchyun/ai-fitting-room/assets/63688973/9aba8dcc-c255-4df0-8fb0-fa9723042253)
+_Brief description of DAFlow_
+
+![Input of DAFlow](https://github.com/kchyun/ai-fitting-room/assets/63688973/01cf8d52-bcf9-4ba0-a01f-16acb399b2ee)
+_Input of DAFlow_
 
 ## ♻️ Data Processing
 
