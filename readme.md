@@ -1,4 +1,4 @@
-# AI 피팅룸
+# AI Fitting Room
 
 <aside>
 👜 클릭 한 번으로 옷을 입어볼 수 있다면?
@@ -34,7 +34,7 @@ Virtual Try-On 모델을 이용한 AI 피팅룸
 
 가끔, 내가 가지고 있는 옷들 중 어떤 걸 코디해야 할지 전혀 감이 오지 않는 경우가 있습니다. “이렇게 입으면 괜찮겠지”하고 입어봤더니 내가 상상했던 모습이 아니라 당황스러웠던 적도 있고요. 이런 고민들을 해결하기 위해, 직접 입어보지 않고도 옷을 입은 나의 모습을 확인해볼 수 있도록 피팅해주는 딥러닝 모델을 만들고 싶다는 생각에서 시작되었습니다.
 
-![Image from **[TryOnDiffusion: A Tale of Two UNets](https://tryondiffusion.github.io/)**](https://prod-files-secure.s3.us-west-2.amazonaws.com/caac11a1-578d-4638-bf54-1d47cd3de8ed/ccf67e88-1d14-4407-9535-0e8b073b34e1/Untitled.png)
+![Image from **[TryOnDiffusion: A Tale of Two UNets](https://tryondiffusion.github.io/)**](https://github.com/kchyun/ai-fitting-room/assets/63688973/bd3ab808-3b0f-4456-bc92-6aaea5ee5978)
 
 Image from **[TryOnDiffusion: A Tale of Two UNets](https://tryondiffusion.github.io/)**
 
@@ -54,7 +54,7 @@ Proposed in “**[Dress Code: High-Resolution Multi-Category Virtual Try-On](htt
 - 5만여 장의 옷, 10만여 장의 전신 이미지 데이터
 - keypoint, skeleton, label map, dense pose 등 풍부한 annotation 제공
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/caac11a1-578d-4638-bf54-1d47cd3de8ed/a5f72318-de69-4868-a5ed-92d69d40b3a6/Untitled.png)
+![Untitled](https://github.com/kchyun/ai-fitting-room/assets/63688973/55be9ea7-22c0-4b96-902b-9677cf535f6f)
 
 # 📐 Modeling
 
@@ -62,11 +62,11 @@ Proposed in “**[Dress Code: High-Resolution Multi-Category Virtual Try-On](htt
 
 Proposed in **"[Single Stage Virtual Try-on via Deformable Attention Flows](https://arxiv.org/abs/2207.09161)" from ECCV2022**
 
-![Brief description of DAFlow](https://prod-files-secure.s3.us-west-2.amazonaws.com/caac11a1-578d-4638-bf54-1d47cd3de8ed/61c0407b-2aeb-4122-bc9c-60c2abf87fdb/Untitled.png)
+![Brief description of DAFlow](https://github.com/kchyun/ai-fitting-room/assets/63688973/9aba8dcc-c255-4df0-8fb0-fa9723042253)
 
 Brief description of DAFlow
 
-![Input of DAFlow](https://prod-files-secure.s3.us-west-2.amazonaws.com/caac11a1-578d-4638-bf54-1d47cd3de8ed/29f7c385-da80-4ac8-a141-a560b65a33d6/Untitled.png)
+![Input of DAFlow](https://github.com/kchyun/ai-fitting-room/assets/63688973/01cf8d52-bcf9-4ba0-a01f-16acb399b2ee)
 
 Input of DAFlow
 
@@ -97,7 +97,7 @@ Target Garment를 합성하고자 하는 자리를 검정색으로 마스킹한 
   - Upper + Lower body
     동시에 적용
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/caac11a1-578d-4638-bf54-1d47cd3de8ed/a2a13eb2-b960-4fbb-9b60-5f7b70ac3156/Untitled.png)
+![Untitled](https://github.com/kchyun/ai-fitting-room/assets/63688973/beaf385e-e63f-4c7f-acf3-2e3467e1b3cc)
 
 # 🎓 Training
 
@@ -120,28 +120,28 @@ Target Garment를 합성하고자 하는 자리를 검정색으로 마스킹한 
 
 학습 과정에서 얻은 결과를 왼쪽에서 오른쪽으로 시간순 배열했습니다. 학습할수록 더 정확하고, 자연스럽게 합성하는 모습을 확인할 수 있었습니다. 4번째 epoch 이후부터는 오버피팅이 발생하였습니다.
 
-![상의 합성 결과](https://prod-files-secure.s3.us-west-2.amazonaws.com/caac11a1-578d-4638-bf54-1d47cd3de8ed/ceb5c68f-de85-4964-a83a-427090413bed/Untitled.png)
+![상의 합성 결과](https://github.com/kchyun/ai-fitting-room/assets/63688973/64f72b86-3493-4f04-a1b2-a64790eb08f1)
 
 상의 합성 결과
 
-![하의 합성 결과](https://prod-files-secure.s3.us-west-2.amazonaws.com/caac11a1-578d-4638-bf54-1d47cd3de8ed/ee2f02c7-8ff9-4ae3-afca-e9a9816b11e7/Untitled.png)
+![하의 합성 결과](https://github.com/kchyun/ai-fitting-room/assets/63688973/ef36a884-3831-4fb1-9420-ae429173a76b)
 
 하의 합성 결과
 
-![드레스 합성 결과](https://prod-files-secure.s3.us-west-2.amazonaws.com/caac11a1-578d-4638-bf54-1d47cd3de8ed/9683ec91-967e-4f6a-886d-b843da681808/Untitled.png)
+![드레스 합성 결과](https://github.com/kchyun/ai-fitting-room/assets/63688973/120d30d7-3017-4402-9967-0a722b0ef595)
 
 드레스 합성 결과
 
 ### Inference with new images
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/caac11a1-578d-4638-bf54-1d47cd3de8ed/45cd472e-b69f-4b7e-bc8b-8ec52c592f08/Untitled.png)
+![Untitled](https://github.com/kchyun/ai-fitting-room/assets/63688973/28c894ff-11b4-49cc-b2cd-af2ba2479f3f)
 
 # ⛔ Limitation
 
 ![Failure cases.
 
 1. 복잡한 팔 형태에 맞게 합성에 실패한 경우
-   2~3. 드레스의 넥라인 디테일이 사라지는 경우](https://prod-files-secure.s3.us-west-2.amazonaws.com/caac11a1-578d-4638-bf54-1d47cd3de8ed/f20f24b9-4ed6-49fe-bfdd-4e14d5773f23/Untitled.png)
+   2~3. 드레스의 넥라인 디테일이 사라지는 경우](https://github.com/kchyun/ai-fitting-room/assets/63688973/c729ddad-5fde-4c43-96fe-a5f461c45f2f)
 
 Failure cases.
 
