@@ -6,7 +6,7 @@ Virtual Try-On 모델을 이용한 AI 피팅룸
 
 </aside>
 
-## 💪 Our Team
+<!-- ## 💪 Our Team
 
 > **김채현** _Lead_
 
@@ -26,7 +26,7 @@ Virtual Try-On 모델을 이용한 AI 피팅룸
 
 - Research
 - Data Processing
-- Presentation
+- Presentation -->
 
 ## 👗 Introduction
 
