@@ -8,8 +8,6 @@ Virtual Try-On 모델을 이용한 AI 피팅룸
 
 # 💪 Our Team
 
----
-
 > **김채현** _Lead_
 
 - Research
@@ -32,8 +30,6 @@ Virtual Try-On 모델을 이용한 AI 피팅룸
 
 # 👗 Introduction
 
----
-
 ### Motivation
 
 가끔, 내가 가지고 있는 옷들 중 어떤 걸 코디해야 할지 전혀 감이 오지 않는 경우가 있습니다. “이렇게 입으면 괜찮겠지”하고 입어봤더니 내가 상상했던 모습이 아니라 당황스러웠던 적도 있고요. 이런 고민들을 해결하기 위해, 직접 입어보지 않고도 옷을 입은 나의 모습을 확인해볼 수 있도록 피팅해주는 딥러닝 모델을 만들고 싶다는 생각에서 시작되었습니다.
@@ -50,8 +46,6 @@ Image from **[TryOnDiffusion: A Tale of Two UNets](https://tryondiffusion.github
 
 # 📚 Dataset
 
----
-
 ### Dress-Code [[repo]](https://github.com/aimagelab/dress-code)
 
 Proposed in “**[Dress Code: High-Resolution Multi-Category Virtual Try-On](https://arxiv.org/abs/2204.08532)”**
@@ -63,8 +57,6 @@ Proposed in “**[Dress Code: High-Resolution Multi-Category Virtual Try-On](htt
 ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/caac11a1-578d-4638-bf54-1d47cd3de8ed/a5f72318-de69-4868-a5ed-92d69d40b3a6/Untitled.png)
 
 # 📐 Modeling
-
----
 
 ### DAFlow [[repo]](https://github.com/OFA-Sys/DAFlow)
 
@@ -86,8 +78,6 @@ Deformable attention을 이용한 single stage, end-to-end 구조로, 기존 mul
   3. Shallow encoder-decoder generation
 
 # ♻️ Data Processing
-
----
 
 ### What is ‘Agnostic’?
 
@@ -111,8 +101,6 @@ Target Garment를 합성하고자 하는 자리를 검정색으로 마스킹한 
 
 # 🎓 Training
 
----
-
 ### Fine-Tuning
 
 스크래치부터 학습한 경우 초반 Loss가 크고 수렴 속도가 느렸습니다. 따라서 상반신 중심으로 학습된 DAFlow의 체크포인트에서 전처리한 Dress-Code 데이터셋을 사용해 파인튜닝했습니다.
@@ -127,8 +115,6 @@ Target Garment를 합성하고자 하는 자리를 검정색으로 마스킹한 
   - 1800 paired Upper/Lower/Dresses sets each
 
 # 🧪 Results
-
----
 
 ### Sample results during training
 
@@ -152,8 +138,6 @@ Target Garment를 합성하고자 하는 자리를 검정색으로 마스킹한 
 
 # ⛔ Limitation
 
----
-
 ![Failure cases.
 
 1. 복잡한 팔 형태에 맞게 합성에 실패한 경우
@@ -170,8 +154,6 @@ Failure cases.
 
 # 🤔 Future Works
 
----
-
 ### Performance
 
 - 일반적이고 효과적인 Agnostic mask 형태 연구
@@ -182,5 +164,3 @@ Failure cases.
 
 - 다른 VITON 응용 분야와의 결합
 - 데모 페이지 및 서비스 만들기
-
----
